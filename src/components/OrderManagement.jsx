@@ -46,6 +46,7 @@ const OrderManagement = () => {
                   <th className="px-6 py-3">Date</th>
                   <th className="px-6 py-3">Cost</th>
                   <th className="px-6 py-3">Number of Laborers</th>
+                  {/* <th className="px-6 py-3">Notes</th> */}
                   <th className="px-6 py-3">Status</th>
                 </tr>
               </thead>
@@ -60,6 +61,7 @@ const OrderManagement = () => {
                     <td className="px-6 py-4 whitespace-nowrap">{new Date(order.date).toLocaleDateString()}</td>
                     <td className="px-6 py-4 whitespace-nowrap">Rs. {order.items.reduce((total, item) => total + item.total, 0).toFixed(2)}</td>
                     <td className="px-6 py-4 whitespace-nowrap">{order.items.reduce((total, item) => total + item.quantity, 0)}</td>
+                    {/* <td className="px-6 py-4 whitespace-nowrap">{order.billingDetails.notes}</td> */}
                     <td className="px-6 py-4 whitespace-nowrap">
                       <select
                         value={order.status}

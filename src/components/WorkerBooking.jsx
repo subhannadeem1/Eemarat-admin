@@ -38,6 +38,7 @@ const WorkerBooking = () => {
                 <th className="px-6 py-3">Date</th>
                 <th className="px-6 py-3"> Cost</th>
                 <th className="px-6 py-3">No Labores</th>
+                <th className="px-6 py-3">Status</th>
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
@@ -52,6 +53,17 @@ const WorkerBooking = () => {
                   <td className="px-6 py-4 whitespace-nowrap">{new Date(booking.date).toLocaleDateString()}</td>
                   <td className="px-6 py-4 whitespace-nowrap">Rs. {booking.totalCost}</td>
                   <td className="px-6 py-4 whitespace-nowrap">{booking.numLaborers}</td>
+                  <td className="px-6 py-4 whitespace-nowrap">
+                      <select
+                       
+                        
+                        className="border border-gray-300 rounded px-2 py-1"
+                      >
+                        <option value="pending">Pending</option>
+                        <option value="unpaid">Unpaid</option>
+                        <option value="fulfilled">Fulfilled</option>
+                      </select>
+                    </td>
                 </tr>
               ))}
             </tbody>

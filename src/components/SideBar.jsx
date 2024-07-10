@@ -24,6 +24,12 @@ const SideBar = () => {
                 <span>Booked Worker</span>
             </button>
         </Link>
+        <Link to={'/OrderManagement'}>
+            <button className='flexCenter gap-2 rounded-md bg-primary h-12 w-36 xs:w-44 medium-14 xs:medium-16'>
+                <img src={listProduct} alt=""  height={50} width={50}/>
+                <span>Booked order</span>
+            </button>
+        </Link>
     </div>
   )
 }
